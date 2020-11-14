@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        构造注入：spring 调用类有参数构造方法，在创建对象的同时，在构造方法中给属性赋值
+        构造注入使用标签：<constructor-arg></constructor-arg>
+        一个 <constructor-arg> 标签表示构造方法的一个属性
+        <constructor-arg> 标签属性：
+            name:构造方法的形参名
+            index:构造方法参数的位置, 0,1,2...
+            value:形参类型是简单类型的
+            ref:形参类型是引用类型的
+     -->
+    <bean id="myStudent" class="com.thorine.ba03.Student" >
+        <constructor-arg name="name" value="张三" />
+        <constructor-arg name="age" value="15" />
+        <constructor-arg name="school" ref="mySchool" />
+    </bean>
+
+    <!-- 使用index属性 -->
+    <bean id="myStudent2" class="com.thorine.ba03.Student" >
+        <constructor-arg index="0" value="李四" />
+        <constructor-arg index="1" value="25" />
+        <constructor-arg index="2" ref="mySchool" />
+    </bean>
+
+    <!--声明School对象-->
+    <bean id="mySchool" class="com.thorine.ba03.School">
+        <property name="name" value="北京大学"/>
+        <property name="address" value="北京"/>
+    </bean>
+</beans>
