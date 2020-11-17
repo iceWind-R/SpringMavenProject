@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01_hello-spring/01_hello-spring.iml" filepath="$PROJECT_DIR$/01_hello-spring/01_hello-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_di-xml/02_di-xml.iml" filepath="$PROJECT_DIR$/02_di-xml/02_di-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_di-annotations/03_di-annotations.iml" filepath="$PROJECT_DIR$/03_di-annotations/03_di-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_aop-leadin/04_aop-leadin.iml" filepath="$PROJECT_DIR$/04_aop-leadin/04_aop-leadin.iml" />
     </modules>
   </component>
 </project>
